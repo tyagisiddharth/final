@@ -1,0 +1,554 @@
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+/usr/local/lib/python3.10/dist-packages/transformers/models/t5/modeling_t5.py:1581: FutureWarning: `T5ForConditionalGeneration.parallelize` is deprecated and will be removed in v5 of Transformers, you should load your model with `device_map='balanced'` in the call to `from_pretrained`. You can also provide your own `device_map` but it needs to be a dictionary module_name to device, so for instance {'encoder.block.0': 0, 'encoder.block.1': 1, ...}
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/models/t5/modeling_t5.py:922: FutureWarning: `T5Stack.parallelize` is deprecated and will be removed in v5 of Transformers, you should load your model with `device_map='balanced'` in the call to `from_pretrained`. You can also provide your own `device_map` but it needs to be a dictionary module_name to device, so for instance {'block.0': 0, 'block.1': 1, ...}
+  warnings.warn(
+{'input_ids': [8774, 6, 296, 55, 1], 'attention_mask': [1, 1, 1, 1, 1]}
+Constitution_of_India Dataset: DatasetDict({
+    train: Dataset({
+        features: ['question', 'answer'],
+        num_rows: 933
+    })
+})
+Constitution_Of_India_Instruction_Set Dataset: DatasetDict({
+    train: Dataset({
+        features: ['instruction', 'input', 'output', 'prompt'],
+        num_rows: 4394
+    })
+})
+Constitution Dataset (CSV): DatasetDict({
+    train: Dataset({
+        features: ['question', 'answer', 'id'],
+        num_rows: 9349
+    })
+})
+Constitution_of_India Dataset Split Sizes:
+Train: 745, Validation: 94, Test: 94
+
+Constitution_Of_India_Instruction_Set Dataset Split Sizes:
+Train: 3514, Validation: 440, Test: 440
+
+Constitution Dataset (CSV) Split Sizes:
+Train: 7479, Validation: 935, Test: 935
+Map:   0%|          | 0/745 [00:00<?, ? examples/s]Map: 100%|██████████| 745/745 [00:00<00:00, 158504.44 examples/s]
+Map:   0%|          | 0/94 [00:00<?, ? examples/s]Map: 100%|██████████| 94/94 [00:00<00:00, 65765.57 examples/s]
+Map:   0%|          | 0/94 [00:00<?, ? examples/s]Map: 100%|██████████| 94/94 [00:00<00:00, 70987.50 examples/s]
+Map:   0%|          | 0/3514 [00:00<?, ? examples/s]Map: 100%|██████████| 3514/3514 [00:00<00:00, 171632.67 examples/s]
+Map:   0%|          | 0/440 [00:00<?, ? examples/s]Map: 100%|██████████| 440/440 [00:00<00:00, 129508.33 examples/s]
+Map:   0%|          | 0/440 [00:00<?, ? examples/s]Map: 100%|██████████| 440/440 [00:00<00:00, 127928.31 examples/s]
+Map:   0%|          | 0/7479 [00:00<?, ? examples/s]Map: 100%|██████████| 7479/7479 [00:00<00:00, 187260.92 examples/s]
+Map:   0%|          | 0/935 [00:00<?, ? examples/s]Map: 100%|██████████| 935/935 [00:00<00:00, 179219.19 examples/s]
+Map:   0%|          | 0/935 [00:00<?, ? examples/s]Map: 100%|██████████| 935/935 [00:00<00:00, 169990.21 examples/s]
+Tokenized Constitution_of_India Dataset: DatasetDict({
+    train: Dataset({
+        features: ['question', 'answer'],
+        num_rows: 745
+    })
+    validation: Dataset({
+        features: ['question', 'answer'],
+        num_rows: 94
+    })
+    test: Dataset({
+        features: ['question', 'answer'],
+        num_rows: 94
+    })
+})
+Tokenized Constitution_Of_India_Instruction_Set Dataset: DatasetDict({
+    train: Dataset({
+        features: ['instruction', 'input', 'output', 'prompt'],
+        num_rows: 3514
+    })
+    validation: Dataset({
+        features: ['instruction', 'input', 'output', 'prompt'],
+        num_rows: 440
+    })
+    test: Dataset({
+        features: ['instruction', 'input', 'output', 'prompt'],
+        num_rows: 440
+    })
+})
+Tokenized Constitution Dataset (CSV): DatasetDict({
+    train: Dataset({
+        features: ['question', 'answer', 'id'],
+        num_rows: 7479
+    })
+    validation: Dataset({
+        features: ['question', 'answer', 'id'],
+        num_rows: 935
+    })
+    test: Dataset({
+        features: ['question', 'answer', 'id'],
+        num_rows: 935
+    })
+})
+Current columns in the dataset: DatasetDict({
+    train: Dataset({
+        features: ['input_text', 'input', 'target_text', 'prompt'],
+        num_rows: 3514
+    })
+    validation: Dataset({
+        features: ['input_text', 'input', 'target_text', 'prompt'],
+        num_rows: 440
+    })
+    test: Dataset({
+        features: ['input_text', 'input', 'target_text', 'prompt'],
+        num_rows: 440
+    })
+})
+Map:   0%|          | 0/11738 [00:00<?, ? examples/s]Map:  60%|█████▉    | 7000/11738 [00:00<00:00, 58674.26 examples/s]Map: 100%|██████████| 11738/11738 [00:00<00:00, 55923.74 examples/s]
+Map:   0%|          | 0/1469 [00:00<?, ? examples/s]Map: 100%|██████████| 1469/1469 [00:00<00:00, 76785.63 examples/s]
+Map:   0%|          | 0/1469 [00:00<?, ? examples/s]Map: 100%|██████████| 1469/1469 [00:00<00:00, 78583.69 examples/s]
+DatasetDict({
+    train: Dataset({
+        features: ['input_text', 'target_text'],
+        num_rows: 11738
+    })
+    validation: Dataset({
+        features: ['input_text', 'target_text'],
+        num_rows: 1469
+    })
+    test: Dataset({
+        features: ['input_text', 'target_text'],
+        num_rows: 1469
+    })
+})
+Filter:   0%|          | 0/11738 [00:00<?, ? examples/s]Filter: 100%|██████████| 11738/11738 [00:00<00:00, 247223.05 examples/s]
+Filter:   0%|          | 0/1469 [00:00<?, ? examples/s]Filter: 100%|██████████| 1469/1469 [00:00<00:00, 176429.07 examples/s]
+Filter:   0%|          | 0/1469 [00:00<?, ? examples/s]Filter: 100%|██████████| 1469/1469 [00:00<00:00, 181037.57 examples/s]
+Map:   0%|          | 0/11738 [00:00<?, ? examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:4109: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Map:   9%|▊         | 1000/11738 [00:00<00:09, 1147.34 examples/s]Map:  17%|█▋        | 2000/11738 [00:02<00:11, 878.95 examples/s] Map:  26%|██▌       | 3000/11738 [00:03<00:10, 812.85 examples/s]Map:  34%|███▍      | 4000/11738 [00:04<00:09, 798.34 examples/s]Map:  43%|████▎     | 5000/11738 [00:05<00:07, 881.18 examples/s]Map:  51%|█████     | 6000/11738 [00:06<00:05, 1041.50 examples/s]Map:  60%|█████▉    | 7000/11738 [00:07<00:04, 1170.73 examples/s]Map:  68%|██████▊   | 8000/11738 [00:07<00:02, 1278.76 examples/s]Map:  77%|███████▋  | 9000/11738 [00:08<00:01, 1369.45 examples/s]Map:  85%|████████▌ | 10000/11738 [00:08<00:01, 1428.07 examples/s]Map:  94%|█████████▎| 11000/11738 [00:09<00:00, 1481.12 examples/s]Map: 100%|██████████| 11738/11738 [00:09<00:00, 1502.65 examples/s]Map: 100%|██████████| 11738/11738 [00:10<00:00, 1167.38 examples/s]
+Map:   0%|          | 0/1469 [00:00<?, ? examples/s]Map:  68%|██████▊   | 1000/1469 [00:00<00:00, 1076.91 examples/s]Map: 100%|██████████| 1469/1469 [00:01<00:00, 1239.59 examples/s]Map: 100%|██████████| 1469/1469 [00:01<00:00, 1187.18 examples/s]
+Dataset({
+    features: ['input_ids', 'attention_mask', 'labels'],
+    num_rows: 11738
+})
+Dataset({
+    features: ['input_ids', 'attention_mask', 'labels'],
+    num_rows: 1469
+})
+2024-10-21 19:58:01.445857: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-10-21 19:58:01.445925: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-10-21 19:58:01.445954: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-10-21 19:58:01.454703: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-10-21 19:58:02.535223: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/usr/local/lib/python3.10/dist-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+/test/T5-test/final/model/T5.py:176: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  model.load_state_dict(torch.load(model_save_path))
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3
+Batch: 3

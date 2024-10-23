@@ -1,0 +1,454 @@
+You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565
+/usr/local/lib/python3.10/dist-packages/transformers/models/t5/modeling_t5.py:1581: FutureWarning: `T5ForConditionalGeneration.parallelize` is deprecated and will be removed in v5 of Transformers, you should load your model with `device_map='balanced'` in the call to `from_pretrained`. You can also provide your own `device_map` but it needs to be a dictionary module_name to device, so for instance {'encoder.block.0': 0, 'encoder.block.1': 1, ...}
+  warnings.warn(
+/usr/local/lib/python3.10/dist-packages/transformers/models/t5/modeling_t5.py:922: FutureWarning: `T5Stack.parallelize` is deprecated and will be removed in v5 of Transformers, you should load your model with `device_map='balanced'` in the call to `from_pretrained`. You can also provide your own `device_map` but it needs to be a dictionary module_name to device, so for instance {'block.0': 0, 'block.1': 1, ...}
+  warnings.warn(
+{'input_ids': [8774, 6, 296, 55, 1], 'attention_mask': [1, 1, 1, 1, 1]}
+Generating train split:   0%|          | 0/933 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 933/933 [00:00<00:00, 154339.80 examples/s]
+Constitution_of_India Dataset: DatasetDict({
+    train: Dataset({
+        features: ['question', 'answer'],
+        num_rows: 933
+    })
+})
+Generating train split:   0%|          | 0/4394 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 4394/4394 [00:00<00:00, 149859.91 examples/s]
+Constitution_Of_India_Instruction_Set Dataset: DatasetDict({
+    train: Dataset({
+        features: ['instruction', 'input', 'output', 'prompt'],
+        num_rows: 4394
+    })
+})
+Generating train split:   0%|          | 0/9349 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 9349/9349 [00:00<00:00, 144697.89 examples/s]
+Constitution Dataset (CSV): DatasetDict({
+    train: Dataset({
+        features: ['question', 'answer', 'id'],
+        num_rows: 9349
+    })
+})
+Constitution_of_India Dataset Split Sizes:
+Train: 745, Validation: 94, Test: 94
+
+Constitution_Of_India_Instruction_Set Dataset Split Sizes:
+Train: 3514, Validation: 440, Test: 440
+
+Constitution Dataset (CSV) Split Sizes:
+Train: 7479, Validation: 935, Test: 935
+Map:   0%|          | 0/745 [00:00<?, ? examples/s]Map: 100%|██████████| 745/745 [00:00<00:00, 150012.31 examples/s]
+Map:   0%|          | 0/94 [00:00<?, ? examples/s]Map: 100%|██████████| 94/94 [00:00<00:00, 60165.51 examples/s]
+Map:   0%|          | 0/94 [00:00<?, ? examples/s]Map: 100%|██████████| 94/94 [00:00<00:00, 67453.31 examples/s]
+Map:   0%|          | 0/3514 [00:00<?, ? examples/s]Map: 100%|██████████| 3514/3514 [00:00<00:00, 156954.20 examples/s]
+Map:   0%|          | 0/440 [00:00<?, ? examples/s]Map: 100%|██████████| 440/440 [00:00<00:00, 119071.80 examples/s]
+Map:   0%|          | 0/440 [00:00<?, ? examples/s]Map: 100%|██████████| 440/440 [00:00<00:00, 126881.66 examples/s]
+Map:   0%|          | 0/7479 [00:00<?, ? examples/s]Map: 100%|██████████| 7479/7479 [00:00<00:00, 175515.59 examples/s]
+Map:   0%|          | 0/935 [00:00<?, ? examples/s]Map: 100%|██████████| 935/935 [00:00<00:00, 169300.39 examples/s]
+Map:   0%|          | 0/935 [00:00<?, ? examples/s]Map: 100%|██████████| 935/935 [00:00<00:00, 171072.86 examples/s]
+Tokenized Constitution_of_India Dataset: DatasetDict({
+    train: Dataset({
+        features: ['question', 'answer'],
+        num_rows: 745
+    })
+    validation: Dataset({
+        features: ['question', 'answer'],
+        num_rows: 94
+    })
+    test: Dataset({
+        features: ['question', 'answer'],
+        num_rows: 94
+    })
+})
+Tokenized Constitution_Of_India_Instruction_Set Dataset: DatasetDict({
+    train: Dataset({
+        features: ['instruction', 'input', 'output', 'prompt'],
+        num_rows: 3514
+    })
+    validation: Dataset({
+        features: ['instruction', 'input', 'output', 'prompt'],
+        num_rows: 440
+    })
+    test: Dataset({
+        features: ['instruction', 'input', 'output', 'prompt'],
+        num_rows: 440
+    })
+})
+Tokenized Constitution Dataset (CSV): DatasetDict({
+    train: Dataset({
+        features: ['question', 'answer', 'id'],
+        num_rows: 7479
+    })
+    validation: Dataset({
+        features: ['question', 'answer', 'id'],
+        num_rows: 935
+    })
+    test: Dataset({
+        features: ['question', 'answer', 'id'],
+        num_rows: 935
+    })
+})
+Current columns in the dataset: DatasetDict({
+    train: Dataset({
+        features: ['input_text', 'input', 'target_text', 'prompt'],
+        num_rows: 3514
+    })
+    validation: Dataset({
+        features: ['input_text', 'input', 'target_text', 'prompt'],
+        num_rows: 440
+    })
+    test: Dataset({
+        features: ['input_text', 'input', 'target_text', 'prompt'],
+        num_rows: 440
+    })
+})
+Map:   0%|          | 0/11738 [00:00<?, ? examples/s]Map:  60%|█████▉    | 7000/11738 [00:00<00:00, 55696.92 examples/s]Map: 100%|██████████| 11738/11738 [00:00<00:00, 54073.15 examples/s]
+Map:   0%|          | 0/1469 [00:00<?, ? examples/s]Map: 100%|██████████| 1469/1469 [00:00<00:00, 76136.63 examples/s]
+Map:   0%|          | 0/1469 [00:00<?, ? examples/s]Map: 100%|██████████| 1469/1469 [00:00<00:00, 77367.03 examples/s]
+DatasetDict({
+    train: Dataset({
+        features: ['input_text', 'target_text'],
+        num_rows: 11738
+    })
+    validation: Dataset({
+        features: ['input_text', 'target_text'],
+        num_rows: 1469
+    })
+    test: Dataset({
+        features: ['input_text', 'target_text'],
+        num_rows: 1469
+    })
+})
+Filter:   0%|          | 0/11738 [00:00<?, ? examples/s]Filter: 100%|██████████| 11738/11738 [00:00<00:00, 239891.73 examples/s]
+Filter:   0%|          | 0/1469 [00:00<?, ? examples/s]Filter: 100%|██████████| 1469/1469 [00:00<00:00, 176408.87 examples/s]
+Filter:   0%|          | 0/1469 [00:00<?, ? examples/s]Filter: 100%|██████████| 1469/1469 [00:00<00:00, 176388.67 examples/s]
+Map:   0%|          | 0/11738 [00:00<?, ? examples/s]/usr/local/lib/python3.10/dist-packages/transformers/tokenization_utils_base.py:4109: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.
+  warnings.warn(
+Map:   9%|▊         | 1000/11738 [00:00<00:08, 1207.59 examples/s]Map:  17%|█▋        | 2000/11738 [00:02<00:10, 893.56 examples/s] Map:  26%|██▌       | 3000/11738 [00:03<00:10, 810.23 examples/s]Map:  34%|███▍      | 4000/11738 [00:05<00:10, 748.95 examples/s]Map:  43%|████▎     | 5000/11738 [00:05<00:07, 868.35 examples/s]Map:  51%|█████     | 6000/11738 [00:06<00:05, 1020.28 examples/s]Map:  60%|█████▉    | 7000/11738 [00:07<00:04, 1148.68 examples/s]Map:  68%|██████▊   | 8000/11738 [00:07<00:02, 1262.49 examples/s]Map:  77%|███████▋  | 9000/11738 [00:08<00:02, 1336.70 examples/s]Map:  85%|████████▌ | 10000/11738 [00:09<00:01, 1385.39 examples/s]Map:  94%|█████████▎| 11000/11738 [00:09<00:00, 1427.63 examples/s]Map: 100%|██████████| 11738/11738 [00:10<00:00, 1439.27 examples/s]Map: 100%|██████████| 11738/11738 [00:10<00:00, 1138.00 examples/s]
+Map:   0%|          | 0/1469 [00:00<?, ? examples/s]Map:  68%|██████▊   | 1000/1469 [00:00<00:00, 1066.88 examples/s]Map: 100%|██████████| 1469/1469 [00:01<00:00, 1207.34 examples/s]Map: 100%|██████████| 1469/1469 [00:01<00:00, 1159.83 examples/s]
+Dataset({
+    features: ['input_ids', 'attention_mask', 'labels'],
+    num_rows: 11738
+})
+Dataset({
+    features: ['input_ids', 'attention_mask', 'labels'],
+    num_rows: 1469
+})
+2024-10-20 18:48:04.291745: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-10-20 18:48:04.291873: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-10-20 18:48:04.292548: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-10-20 18:48:04.361429: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-10-20 18:48:05.960098: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/usr/local/lib/python3.10/dist-packages/transformers/optimization.py:591: FutureWarning: This implementation of AdamW is deprecated and will be removed in a future version. Use the PyTorch implementation torch.optim.AdamW instead, or set `no_deprecation_warning=True` to disable this warning
+  warnings.warn(
+`use_cache=True` is incompatible with gradient checkpointing. Setting `use_cache=False`...
+Epoch 0, Step 0, Loss: 8.529152870178223
+Epoch 0, Step 20, Loss: 8.67467212677002
+Epoch 0, Step 40, Loss: 4.233917713165283
+Epoch 0, Step 60, Loss: 3.1080780029296875
+Epoch 0, Step 80, Loss: 5.109095096588135
+Epoch 0, Step 100, Loss: 7.004528045654297
+Epoch 0, Step 120, Loss: 10.6300687789917
+Epoch 0, Step 140, Loss: 2.5850179195404053
+Epoch 0, Step 160, Loss: 4.127819061279297
+Epoch 0, Step 180, Loss: 5.523618221282959
+Epoch 0, Step 200, Loss: 2.838550090789795
+Epoch 0, Step 220, Loss: 6.787298202514648
+Epoch 0, Step 240, Loss: 5.467565536499023
+Epoch 0, Step 260, Loss: 4.398008346557617
+Epoch 0, Step 280, Loss: 3.2171359062194824
+Epoch 0, Step 300, Loss: 3.1691877841949463
+Epoch 0, Step 320, Loss: 10.479989051818848
+Epoch 0, Step 340, Loss: 3.0743041038513184
+Epoch 0, Step 360, Loss: 6.359777927398682
+Epoch 0, Step 380, Loss: 8.004128456115723
+Epoch 0, Step 400, Loss: 3.235227584838867
+Epoch 0, Step 420, Loss: 8.225092887878418
+Epoch 0, Step 440, Loss: 4.097142219543457
+Epoch 0, Step 460, Loss: 2.423645496368408
+Epoch 0, Step 480, Loss: 7.556738376617432
+Epoch 0, Step 500, Loss: 2.5991501808166504
+Epoch 0, Step 520, Loss: 3.558777093887329
+Epoch 0, Step 540, Loss: 5.533801555633545
+Epoch 0, Step 560, Loss: 2.9519309997558594
+Epoch 0, Step 580, Loss: 4.168848514556885
+Epoch 0, Step 600, Loss: 3.6526472568511963
+Epoch 0, Step 620, Loss: 6.50935173034668
+Epoch 0, Step 640, Loss: 4.095587730407715
+Epoch 0, Step 660, Loss: 3.0927212238311768
+Epoch 0, Step 680, Loss: 3.134467601776123
+Epoch 0, Step 700, Loss: 5.589770793914795
+Epoch 0, Step 720, Loss: 5.993291854858398
+Epoch 0, Step 740, Loss: 5.906172752380371
+Epoch 0, Step 760, Loss: 2.4515795707702637
+Epoch 0, Step 780, Loss: 9.487390518188477
+Epoch 0, Step 800, Loss: 3.4682345390319824
+Epoch 0, Step 820, Loss: 3.443561315536499
+Epoch 0, Step 840, Loss: 3.863952875137329
+Epoch 0, Step 860, Loss: 5.378239631652832
+Epoch 0, Step 880, Loss: 2.7540273666381836
+Epoch 0, Step 900, Loss: 5.524746417999268
+Epoch 0, Step 920, Loss: 2.80712890625
+Epoch 0, Step 940, Loss: 1.9856706857681274
+Epoch 0, Step 960, Loss: 2.0379486083984375
+Epoch 0, Step 980, Loss: 1.9484111070632935
+Epoch 0, Step 1000, Loss: 2.4343652725219727
+Epoch 0, Step 1020, Loss: 5.6055006980896
+Epoch 0, Step 1040, Loss: 2.312957763671875
+Epoch 0, Step 1060, Loss: 2.5609874725341797
+Epoch 0, Step 1080, Loss: 3.1148576736450195
+Epoch 0, Step 1100, Loss: 2.49920392036438
+Epoch 0, Step 1120, Loss: 2.5461490154266357
+Epoch 0, Step 1140, Loss: 3.07718563079834
+Epoch 0, Step 1160, Loss: 2.8233699798583984
+Epoch 0, Step 1180, Loss: 4.378542900085449
+Epoch 0, Step 1200, Loss: 2.0091793537139893
+Epoch 0, Step 1220, Loss: 2.2661616802215576
+Epoch 0, Step 1240, Loss: 3.1238901615142822
+Epoch 0, Step 1260, Loss: 6.579918384552002
+Epoch 0, Step 1280, Loss: 2.225192070007324
+Epoch 0, Step 1300, Loss: 3.362579822540283
+Epoch 0, Step 1320, Loss: 6.379186630249023
+Epoch 0, Step 1340, Loss: 1.7650882005691528
+Epoch 0, Step 1360, Loss: 1.965758204460144
+Epoch 0, Step 1380, Loss: 6.028082370758057
+Epoch 0, Step 1400, Loss: 5.114718914031982
+Epoch 0, Step 1420, Loss: 5.026210784912109
+Epoch 0, Step 1440, Loss: 4.664410591125488
+Epoch 0, Step 1460, Loss: 2.495877265930176
+Epoch 0, Step 1480, Loss: 2.176150321960449
+Epoch 0, Step 1500, Loss: 2.182727098464966
+Epoch 0, Step 1520, Loss: 3.215484619140625
+Epoch 0, Step 1540, Loss: 1.8838739395141602
+Epoch 0, Step 1560, Loss: 4.295733451843262
+Epoch 0, Step 1580, Loss: 3.3265271186828613
+Epoch 0, Step 1600, Loss: 1.9450269937515259
+Epoch 0, Step 1620, Loss: 3.3946003913879395
+Epoch 0, Step 1640, Loss: 2.286264419555664
+Epoch 0, Step 1660, Loss: 6.354394912719727
+Epoch 0, Step 1680, Loss: 1.4403449296951294
+Epoch 0, Step 1700, Loss: 2.400512218475342
+Epoch 0, Step 1720, Loss: 1.7058932781219482
+Epoch 0, Step 1740, Loss: 4.765018939971924
+Epoch 0, Step 1760, Loss: 4.538469314575195
+Epoch 0, Step 1780, Loss: 3.818138360977173
+Epoch 0, Step 1800, Loss: 2.048569440841675
+Epoch 0, Step 1820, Loss: 1.9749255180358887
+Epoch 0, Step 1840, Loss: 6.111198902130127
+Epoch 0, Step 1860, Loss: 2.980409622192383
+Epoch 0, Step 1880, Loss: 2.093132972717285
+Epoch 0, Step 1900, Loss: 6.237067222595215
+Epoch 0, Step 1920, Loss: 2.915153741836548
+Epoch 0, Step 1940, Loss: 1.3490893840789795
+Epoch 0, Step 1960, Loss: 2.6849067211151123
+Epoch 0, Step 1980, Loss: 2.9242546558380127
+Epoch 0, Step 2000, Loss: 4.859813690185547
+Epoch 0, Step 2020, Loss: 3.9578466415405273
+Epoch 0, Step 2040, Loss: 1.3200013637542725
+Epoch 0, Step 2060, Loss: 1.962607979774475
+Epoch 0, Step 2080, Loss: 2.5986170768737793
+Epoch 0, Step 2100, Loss: 6.139113426208496
+Epoch 0, Step 2120, Loss: 4.109515190124512
+Epoch 0, Step 2140, Loss: 2.133542776107788
+Epoch 0, Step 2160, Loss: 3.7260758876800537
+Epoch 0, Step 2180, Loss: 2.0465333461761475
+Epoch 0, Step 2200, Loss: 5.075418949127197
+Epoch 0, Step 2220, Loss: 1.5897324085235596
+Epoch 0, Step 2240, Loss: 2.5643301010131836
+Epoch 0, Step 2260, Loss: 1.1567802429199219
+Epoch 0, Step 2280, Loss: 2.2016074657440186
+Epoch 0, Step 2300, Loss: 2.100865364074707
+Epoch 0, Step 2320, Loss: 1.4825124740600586
+Epoch 0, Step 2340, Loss: 4.929301738739014
+Epoch 0, Step 2360, Loss: 3.7996106147766113
+Epoch 0, Step 2380, Loss: 1.6734586954116821
+Epoch 0, Step 2400, Loss: 1.8497626781463623
+Epoch 0, Step 2420, Loss: 1.6368966102600098
+Epoch 0, Step 2440, Loss: 2.940497398376465
+Epoch 0, Step 2460, Loss: 2.6736626625061035
+Epoch 0, Step 2480, Loss: 1.530991554260254
+Epoch 0, Step 2500, Loss: 2.8818271160125732
+Epoch 0, Step 2520, Loss: 2.893989086151123
+Epoch 0, Step 2540, Loss: 1.1955175399780273
+Epoch 0, Step 2560, Loss: 4.085870742797852
+Epoch 0, Step 2580, Loss: 3.3964593410491943
+Epoch 0, Step 2600, Loss: 4.247868061065674
+Epoch 0, Step 2620, Loss: 3.7561120986938477
+Epoch 0, Step 2640, Loss: 1.7044119834899902
+Epoch 0, Step 2660, Loss: 2.417032480239868
+Epoch 0, Step 2680, Loss: 9.276412010192871
+Epoch 0, Step 2700, Loss: 3.0235531330108643
+Epoch 0, Step 2720, Loss: 6.008181095123291
+Epoch 0, Step 2740, Loss: 1.8335422277450562
+Epoch 0, Step 2760, Loss: 3.591956615447998
+Epoch 0, Step 2780, Loss: 1.9483155012130737
+Epoch 0, Step 2800, Loss: 3.817533493041992
+Epoch 0, Step 2820, Loss: 1.0538989305496216
+Epoch 0, Step 2840, Loss: 2.0807905197143555
+Epoch 0, Step 2860, Loss: 1.6711664199829102
+Epoch 0, Step 2880, Loss: 3.000276803970337
+Epoch 0, Step 2900, Loss: 1.5255860090255737
+Epoch 0, Step 2920, Loss: 3.243992328643799
+Epoch 0, Step 2940, Loss: 1.6965745687484741
+Epoch 0, Step 2960, Loss: 4.654432773590088
+Epoch 0, Step 2980, Loss: 0.866117000579834
+Epoch 0, Step 3000, Loss: 2.5014941692352295
+Epoch 0, Step 3020, Loss: 1.5284391641616821
+Epoch 0, Step 3040, Loss: 4.054217338562012
+Epoch 0, Step 3060, Loss: 0.9227463603019714
+Epoch 0, Step 3080, Loss: 1.8232595920562744
+Epoch 0, Step 3100, Loss: 0.961536705493927
+Epoch 0, Step 3120, Loss: 2.226212501525879
+Epoch 0, Step 3140, Loss: 1.746040940284729
+Epoch 0, Step 3160, Loss: 1.5799648761749268
+Epoch 0, Step 3180, Loss: 1.6954468488693237
+Epoch 0, Step 3200, Loss: 3.586270570755005
+Epoch 0, Step 3220, Loss: 1.896716594696045
+Epoch 0, Step 3240, Loss: 1.9416580200195312
+Epoch 0, Step 3260, Loss: 2.102301836013794
+Epoch 0, Step 3280, Loss: 1.437966227531433
+Epoch 0, Step 3300, Loss: 2.303407669067383
+Epoch 0, Step 3320, Loss: 2.0692429542541504
+Epoch 0, Step 3340, Loss: 1.7736551761627197
+Epoch 0, Step 3360, Loss: 1.721865177154541
+Epoch 0, Step 3380, Loss: 5.5500688552856445
+Epoch 0, Step 3400, Loss: 3.568969488143921
+Epoch 0, Step 3420, Loss: 3.7231833934783936
+Epoch 0, Step 3440, Loss: 1.4374237060546875
+Epoch 0, Step 3460, Loss: 2.2457187175750732
+Epoch 0, Step 3480, Loss: 4.566125869750977
+Epoch 0, Step 3500, Loss: 1.4492108821868896
+Epoch 0, Step 3520, Loss: 1.285629153251648
+Epoch 0, Step 3540, Loss: 1.345977544784546
+Epoch 0, Step 3560, Loss: 1.5253196954727173
+Epoch 0, Step 3580, Loss: 1.8820745944976807
+Epoch 0, Step 3600, Loss: 2.7832939624786377
+Epoch 0, Step 3620, Loss: 3.1826119422912598
+Epoch 0, Step 3640, Loss: 1.3716776371002197
+Epoch 0, Step 3660, Loss: 2.062523603439331
+Epoch 0, Step 3680, Loss: 6.022579193115234
+Epoch 0, Step 3700, Loss: 1.981139898300171
+Epoch 0, Step 3720, Loss: 1.5493360757827759
+Epoch 0, Step 3740, Loss: 4.0310163497924805
+Epoch 0, Step 3760, Loss: 3.0323216915130615
+Epoch 0, Step 3780, Loss: 2.2751755714416504
+Epoch 0, Step 3800, Loss: 2.5800328254699707
+Epoch 0, Step 3820, Loss: 5.443725109100342
+Epoch 0, Step 3840, Loss: 1.548584222793579
+Epoch 0, Step 3860, Loss: 2.7944228649139404
+Epoch 0, Step 3880, Loss: 1.522741436958313
+Epoch 0, Step 3900, Loss: 1.450833797454834
+Epoch 0, Step 3920, Loss: 1.211774230003357
+Epoch 0, Step 3940, Loss: 3.0057737827301025
+Epoch 0, Step 3960, Loss: 1.6100115776062012
+Epoch 0, Step 3980, Loss: 1.8332675695419312
+Epoch 0, Step 4000, Loss: 2.054666519165039
+Epoch 0, Step 4020, Loss: 2.670788049697876
+Epoch 0, Step 4040, Loss: 3.535313367843628
+Epoch 0, Step 4060, Loss: 2.2816803455352783
+Epoch 0, Step 4080, Loss: 1.3529157638549805
+Epoch 0, Step 4100, Loss: 1.2905573844909668
+Epoch 0, Step 4120, Loss: 2.2565574645996094
+Epoch 0, Step 4140, Loss: 1.4153730869293213
+Epoch 0, Step 4160, Loss: 1.3826377391815186
+Epoch 0, Step 4180, Loss: 1.9850594997406006
+Epoch 0, Step 4200, Loss: 1.2015348672866821
+Epoch 0, Step 4220, Loss: 3.9090943336486816
+Epoch 0, Step 4240, Loss: 1.5912952423095703
+Epoch 0, Step 4260, Loss: 1.5388646125793457
+Epoch 0, Step 4280, Loss: 5.20393705368042
+Epoch 0, Step 4300, Loss: 3.8147263526916504
+Epoch 0, Step 4320, Loss: 0.9041693806648254
+Epoch 0, Step 4340, Loss: 1.2274448871612549
+Epoch 0, Step 4360, Loss: 5.431649684906006
+Epoch 0, Step 4380, Loss: 1.6635380983352661
+Epoch 0, Step 4400, Loss: 1.6293047666549683
+Epoch 0, Step 4420, Loss: 2.567342519760132
+Epoch 0, Step 4440, Loss: 2.1718482971191406
+Epoch 0, Step 4460, Loss: 1.0146170854568481
+Epoch 0, Step 4480, Loss: 2.7652111053466797
+Epoch 0, Step 4500, Loss: 4.113206386566162
+Epoch 0, Step 4520, Loss: 1.3113600015640259
+Epoch 0, Step 4540, Loss: 2.1538314819335938
+Epoch 0, Step 4560, Loss: 4.9045586585998535
+Epoch 0, Step 4580, Loss: 3.321779489517212
+Epoch 0, Step 4600, Loss: 5.235213279724121
+Epoch 0, Step 4620, Loss: 3.2239115238189697
+Epoch 0, Step 4640, Loss: 2.7873895168304443
+Epoch 0, Step 4660, Loss: 1.4195157289505005
+Epoch 0, Step 4680, Loss: 3.011301279067993
+Epoch 0, Step 4700, Loss: 2.708983898162842
+Epoch 0, Step 4720, Loss: 2.5778565406799316
+Epoch 0, Step 4740, Loss: 3.3493902683258057
+Epoch 0, Step 4760, Loss: 1.3745813369750977
+Epoch 0, Step 4780, Loss: 1.824608325958252
+Epoch 0, Step 4800, Loss: 1.1195107698440552
+Epoch 0, Step 4820, Loss: 5.755512237548828
+Epoch 0, Step 4840, Loss: 3.0905957221984863
+Epoch 0, Step 4860, Loss: 4.821702003479004
+Epoch 0, Step 4880, Loss: 1.71898353099823
+Epoch 0, Step 4900, Loss: 2.7111928462982178
+Epoch 0, Step 4920, Loss: 1.2502126693725586
+Epoch 0, Step 4940, Loss: 2.091595411300659
+Epoch 0, Step 4960, Loss: 1.9382175207138062
+Epoch 0, Step 4980, Loss: 2.2168116569519043
+Epoch 0, Step 5000, Loss: 1.0688508749008179
+Epoch 0, Step 5020, Loss: 5.586850166320801
+Epoch 0, Step 5040, Loss: 4.966228008270264
+Epoch 0, Step 5060, Loss: 5.100335121154785
+Epoch 0, Step 5080, Loss: 4.7426438331604
+Epoch 0, Step 5100, Loss: 1.4557279348373413
+Epoch 0, Step 5120, Loss: 6.818438529968262
+Epoch 0, Step 5140, Loss: 4.831705570220947
+Epoch 0, Step 5160, Loss: 1.4549052715301514
+Epoch 0, Step 5180, Loss: 5.994827747344971
+Epoch 0, Step 5200, Loss: 2.7873852252960205
+Epoch 0, Step 5220, Loss: 1.5720429420471191
+Epoch 0, Step 5240, Loss: 6.068560600280762
+Epoch 0, Step 5260, Loss: 4.995689392089844
+Epoch 0, Step 5280, Loss: 1.1174840927124023
+Epoch 0, Step 5300, Loss: 0.9253039360046387
+Epoch 0, Step 5320, Loss: 0.943170428276062
+Epoch 0, Step 5340, Loss: 4.714625835418701
+Epoch 0, Step 5360, Loss: 0.9531781673431396
+Epoch 0, Step 5380, Loss: 1.1998978853225708
+Epoch 0, Step 5400, Loss: 3.646467447280884
+Epoch 0, Step 5420, Loss: 1.71390962600708
+Epoch 0, Step 5440, Loss: 3.9342093467712402
+Epoch 0, Step 5460, Loss: 2.488405704498291
+Epoch 0, Step 5480, Loss: 1.6636745929718018
+Epoch 0, Step 5500, Loss: 1.7507975101470947
+Epoch 0, Step 5520, Loss: 3.7128429412841797
+Epoch 0, Step 5540, Loss: 1.4099948406219482
+Epoch 0, Step 5560, Loss: 2.297459840774536
+Epoch 0, Step 5580, Loss: 6.123395919799805
+Epoch 0, Step 5600, Loss: 4.171629905700684
+Epoch 0, Step 5620, Loss: 1.162834644317627
+Epoch 0, Step 5640, Loss: 1.9474563598632812
+Epoch 0, Step 5660, Loss: 3.0342650413513184
+Epoch 0, Step 5680, Loss: 2.1883440017700195
+Epoch 0, Step 5700, Loss: 1.4792715311050415
+Epoch 0, Step 5720, Loss: 4.407071113586426
+Epoch 0, Step 5740, Loss: 1.373289704322815
+Epoch 0, Step 5760, Loss: 2.102210760116577
+Epoch 0, Step 5780, Loss: 2.145860433578491
+Epoch 0, Step 5800, Loss: 4.520471572875977
+Epoch 0, Step 5820, Loss: 2.243238925933838
+Epoch 0, Step 5840, Loss: 2.8254234790802
+Epoch 0, Step 5860, Loss: 3.082502603530884
+Model saved at ./model_directory/model_epoch_0.pt
+Traceback (most recent call last):
+  File "/test/T5-test/final/model/T5.py", line 254, in <module>
+    val_metrics, val_loss = evaluate(model, dataloader, compute_metrics)
+  File "/test/T5-test/final/model/T5.py", line 211, in evaluate
+    outputs = model(**batch)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/transformers/models/t5/modeling_t5.py", line 1703, in forward
+    encoder_outputs = self.encoder(
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1736, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/torch/nn/modules/module.py", line 1747, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/transformers/models/t5/modeling_t5.py", line 1002, in forward
+    input_shape = input_ids.size()
+AttributeError: 'list' object has no attribute 'size'
